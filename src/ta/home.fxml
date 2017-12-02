@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="659.0" style="-fx-background-color: #ffffcc;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ta.HomeController">
+   <children>
+      <Pane focusTraversable="true" prefHeight="96.0" prefWidth="659.0" style="-fx-background-color: #ffff99;">
+         <children>
+            <Label layoutX="259.0" layoutY="26.0" prefHeight="46.0" prefWidth="142.0" text="X-Money">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="53.0" fitWidth="54.0" layoutX="425.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../gambar/business.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="46.0" layoutX="181.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../gambar/Money@2x.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="59.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../gambar/750px-Posible_bandera_musulmana_de_Mallorca.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="36.0" fitWidth="66.0" layoutX="481.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../gambar/2000px-Flag_of_South_Korea.svg.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="36.0" fitWidth="66.0" layoutX="394.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../gambar/2000px-US_flag_51_stars.svg.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="121.0" layoutY="341.0" text="SALDO ANDA SAAT INI " />
+      <JFXButton layoutX="27.0" layoutY="115.0" onAction="#menabung" prefHeight="36.0" prefWidth="305.0" style="-fx-background-color: white;" text="KLIK DISINI untuk Menabung" textFill="#9c5317">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow color="#ffff99" height="32.86" radius="16.6725" width="35.83" />
+         </effect>
+      </JFXButton>
+      <TextField fx:id="saldo" layoutX="110.0" layoutY="363.0" />
+      <TableView fx:id="table" layoutX="59.0" layoutY="203.0" prefHeight="130.0" prefWidth="241.0">
+        <columns>
+          <TableColumn fx:id="idtabel" prefWidth="38.0" text="ID" />
+          <TableColumn fx:id="tgltabel" prefWidth="83.0" text="TANGGAL" />
+            <TableColumn fx:id="saldotabel" prefWidth="119.0" text="SALDO" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="36.0" fitWidth="66.0" layoutX="549.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../gambar/20151007-750px-flag_of_saudi_arabia-700x.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="392.0" layoutY="118.0" text="KONVERSI MATA UANG" textFill="#8f4c0e">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <TextField fx:id="saldokonv" layoutX="427.0" layoutY="299.0" prefHeight="46.0" prefWidth="149.0" />
+      <JFXButton layoutX="419.0" layoutY="260.0" onAction="#konversi" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: white;" text="KONVERSIKAN" textFill="#17179e">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow color="#ffff99" height="32.86" radius="16.6725" width="35.83" />
+         </effect>
+      </JFXButton>
+      <JFXButton layoutX="136.0" layoutY="157.0" onAction="#update" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: white;" text="Update" textFill="#17179e">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow color="#ffff99" height="32.86" radius="16.6725" width="35.83" />
+         </effect>
+      </JFXButton>
+      <JFXRadioButton fx:id="usd" layoutX="388.0" layoutY="203.0" text="USD" >
+         <toggleGroup>
+            <ToggleGroup fx:id="konversi" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="krw" layoutX="471.0" layoutY="232.0" text="KRW" toggleGroup="$konversi" />
+      <JFXRadioButton fx:id="sar" layoutX="535.0" layoutY="203.0" text="SAR" toggleGroup="$konversi" />
+   </children>
+</Pane>

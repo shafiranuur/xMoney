@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="201.0" prefWidth="340.0" style="-fx-background-color: #ffffcc;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ta.MenabungController">
+   <children>
+      <JFXDatePicker fx:id="tanggalnabung" layoutX="133.0" layoutY="52.0" />
+      <Label layoutX="23.0" layoutY="59.0" text="Tanggal Menabung" />
+      <Label layoutX="24.0" layoutY="101.0" text="Nominal Tabungan" />
+      <JFXTextField fx:id="nominalnabung" layoutX="135.0" layoutY="94.0" />
+      <JFXButton layoutX="139.0" layoutY="151.0" onAction="#tabung" style="-fx-background-color: grey;" text="Tabung !" textFill="WHITE" />
+      <JFXButton layoutX="221.0" layoutY="151.0" onAction="#kembali" style="-fx-background-color: white;" text="Kembali" />
+   </children>
+</Pane>
